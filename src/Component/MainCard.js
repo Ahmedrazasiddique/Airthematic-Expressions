@@ -24,7 +24,6 @@ export default function MainCard(props) {
       return;
     }
     var fileName = e.target.files[0].name;
-    debugger;
     const validExtensions = ["csv"];
     var isValid = true;
     for (let img of e.target.files) {
@@ -86,7 +85,11 @@ export default function MainCard(props) {
           className="flex justify-center sm:justify-start flex-wrap -mx-8"
         >
           <div className="flex flex-col">
-            <Button variant="contained" component="label">
+            <Button
+              style={{ marginRight: "12px" }}
+              variant="contained"
+              component="label"
+            >
               Upload Csv
               <input
                 accept=".csv"
@@ -97,6 +100,7 @@ export default function MainCard(props) {
             </Button>
 
             <TextField
+              style={{ marginRight: "12px" }}
               className="py-8 px-12"
               size="small"
               id="outlined-basic"
